@@ -1,0 +1,106 @@
+<!ENTITY wicked.upload "Upload to...">
+
+<!ENTITY wicked.options        "Configure Wicked seedbox">
+<!ENTITY wicked.options.title  "Wicked seedbox options">
+<!ENTITY wicked.options.save   "Save">
+<!ENTITY wicked.options.ok     "OK">
+<!ENTITY wicked.options.host   "Host">
+<!ENTITY wicked.options.server "Seedbox URL">
+<!ENTITY wicked.options.seedbox "Seedbox">
+<!ENTITY wicked.options.user   "Username">
+<!ENTITY wicked.options.client "Client">
+<!ENTITY wicked.options.add    "Add">
+<!ENTITY wicked.options.edit   "Edit">
+<!ENTITY wicked.options.test   "Test">
+<!ENTITY wicked.options.remove "Remove">
+<!ENTITY wicked.options.login  "Export passwords to rutorrent seedbox">
+
+<!ENTITY wicked.options.capture  "Context menu capture:">
+<!ENTITY wicked.options.capture0  "Switched on for .torrent/magnet: files only">
+<!ENTITY wicked.options.capture1  "Forced for all links">
+<!ENTITY wicked.options.capture2  "Switched off for all links">
+<!ENTITY wicked.options.progress  "Progress messages:">
+<!ENTITY wicked.options.download_start  "Download start">
+<!ENTITY wicked.options.download_failure  "Download failure">
+<!ENTITY wicked.options.upload_start  "Upload started">
+<!ENTITY wicked.options.upload_success  "Upload succeeded">
+<!ENTITY wicked.options.upload_failure  "Upload failed">
+<!ENTITY wicked.options.server_login_failure  "Server login failure">
+<!ENTITY wicked.options.server_connection_timeout  "Server connection timeout">
+<!ENTITY wicked.options.other_options  "Other options (rutorrent and deluge only):">
+<!ENTITY wicked.options.nostart  "Upload without starting the torrent">
+<!ENTITY wicked.options.edit_labels_before  "Edit labels before uploading">
+<!ENTITY wicked.options.edit_directories_before  "Select download directory before uploading the torrent">
+<!ENTITY wicked.options.server_timeout  "Server timeout, in seconds:">
+<!ENTITY wicked.options.promo  "Notify me of new Wicked products">
+
+<!ENTITY wicked.wizard.desc1  "You can use">
+<!ENTITY wicked.wizard.desc2  "the server wizard">
+<!ENTITY wicked.wizard.desc3  "to add a new Wicked server.">
+<!ENTITY wicked.wizard.title  "server setup wizard">
+
+<!ENTITY wicked.wizard.subscription  "Subscription type">
+<!ENTITY wicked.wizard.subscription_tip  "What is your subscription type?">
+<!ENTITY wicked.wizard.shared  "Shared">
+<!ENTITY wicked.wizard.semidedicated  "Semidedicated">
+<!ENTITY wicked.wizard.dedicated  "Dedicated">
+<!ENTITY wicked.wizard.clients  "Available BitTorrent clients:">
+<!ENTITY wicked.wizard.login  "Login details">
+<!ENTITY wicked.wizard.login_tip  "Please provide your login details:">
+<!ENTITY wicked.wizard.parser1  "Alternatively, you can">
+<!ENTITY wicked.wizard.parser2  "parse your welcome e-mail">
+<!ENTITY wicked.wizard.parser3  "to get this info.">
+
+
+<!ENTITY wicked.seedboxes.title  "Upload to seedbox">
+<!ENTITY wicked.seedboxes.accept "Upload">
+
+<!ENTITY wicked.entry.title       "Server info">
+<!ENTITY wicked.entry.pass        "Password">
+<!ENTITY wicked.entry.description "Description">
+<!ENTITY wicked.entry.urltip1 "Full path to the seedbox, including protocol (http or https),">
+<!ENTITY wicked.entry.urltip2 "server name, port number and the client path.">
+<!ENTITY wicked.entry.usertip "User name registered on the server.">
+<!ENTITY wicked.entry.passtip "Password for the above user name.">
+<!ENTITY wicked.entry.desctip "Description, comment...">
+<!ENTITY wicked.entry.typetip "Type of client this setting uses. Note: if should conform to seedbox URL.">
+<!ENTITY wicked.entry.rutorrent_options_hint "You may use several macros in predefined mode:\n\n{HOST}\n{TRACKER}\n{DATE}">
+<!ENTITY wicked.entry.directory_selection "Directory selection">
+<!ENTITY wicked.entry.label_selection "Label selection">
+<!ENTITY wicked.entry.label_selection_title "Choice type of label selection for your torrent">
+<!ENTITY wicked.entry.permanent_label_title "Enter here label for your torrent.">
+<!ENTITY wicked.entry.directory_selection_title "Choice type of directory selection for your torrent">
+<!ENTITY wicked.entry.permanent_directory_title "Enter here download directory for your torrent.">
+<!ENTITY wicked.entry.none "None">
+<!ENTITY wicked.entry.permanent "Predefined">
+<!ENTITY wicked.entry.at_runtime "At runtime">
+
+<!ENTITY wicked.parser.title "Parse welcome e-mail">
+<!ENTITY wicked.parser.text  "Please paste your Wicked welcome e-mail below">
+<!ENTITY wicked.parser.parse "Parse">
+
+<!ENTITY wicked.labels.title    "Labels">
+<!ENTITY wicked.labels.new      "Selected label">
+<!ENTITY wicked.labels.existing "Existing labels">
+
+<!ENTITY wicked.dirs.title    "Directories">
+<!ENTITY wicked.dirs.new      "Selected directory">
+<!ENTITY wicked.dirs.existing "Existing directories">
+
+<!ENTITY wicked.labelsdirs.title "Directories and labels">
+
+<!ENTITY wicked.upload_options.title "Upload options">
+<!ENTITY wicked.upload_options.not_add_path "Don't add torrent's name to path">
+<!ENTITY wicked.upload_options.torrents_start_stopped "Upload without starting the torrent">
+<!ENTITY wicked.upload_options.fast_resume "Fast resume">
+
+<!ENTITY wicked.export.title   "Export logins and passwords">
+<!ENTITY wicked.options.export "Export">
+<!ENTITY wicked.export.label   "Exported logins">
+<!ENTITY wicked.export.desc1  "You can export your login details from your browser to your seedbox's rutorrent">
+<!ENTITY wicked.export.desc2  "(what it is?)">
+<!ENTITY wicked.export.desc3  "Please select the rutorrent seedbox and press the button below to do it.">
+
+<!ENTITY wicked.saveas.title  "Upload to seedbox">
+
+<!ENTITY wicked.host.hint "URL to access the bittorrent UI you want to upload to.\n\nFor example, if your server was dedi010.wicked.com and you wanted to upload via rutorrent then the URL would be https://dedi010.wicked.com/rtorrent.\n\nKeep in mind that each provider may use naming schemes different to Wicked's. Please contact your provider if you have questions about configuring this extension for their service.">

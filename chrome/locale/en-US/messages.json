@@ -1,0 +1,426 @@
+﻿{
+	"ext_name": 
+	{
+		"message": "Wicked Seedbox"
+	},
+	"ext_description": 
+	{
+		"message": "A seedbox control extension - with support for utorrent, rutorrent, torrentflux-b4rt and more. Because it was developed by Wicked, Wicked's seedboxes are automatically configured, but it works with most others as well, as a way to contribute to the community."
+	},	
+	"seedboxes_title": 
+	{
+		"message": "Choose a seedbox for uploading:"
+	},
+	"ok":
+	{
+		"message": "Ok"
+	},	
+	"cancel":
+	{
+		"message": "Cancel"
+	},
+	"uploading_title":
+	{
+		"message": "Options for uploading"
+	},
+	"labels":
+	{
+		"message": "Labels"
+	},
+	"enter_new_label":
+	{
+		"message": "Enter new label:"
+	},
+	"enter_new_label":
+	{
+		"message": "Enter new label:"
+	},
+	"or_select_existing":
+	{
+		"message": "Or select an existing one:"
+	},
+	"select_label":
+	{
+		"message": "-select label-"
+	},
+	"directories":
+	{
+		"message": "Directories"
+	},
+	"servers":
+	{
+		"message": "Servers"
+	},
+	"options":
+	{
+		"message": "Options"
+	},
+	"add":
+	{
+		"message": "Add"
+	},
+	"edit":
+	{
+		"message": "Edit"
+	},
+	"test":
+	{
+		"message": "Test"
+	},
+	"remove":
+	{
+		"message": "Remove"
+	},	
+	"url":
+	{
+		"message": "URL"
+	},	
+	"username":
+	{
+		"message": "Username"
+	},	
+	"client":
+	{
+		"message": "Client"
+	},
+	"you_can_also_use":
+	{
+		"message": "You can use"
+	},
+	"server_wizard":
+	{
+		"message": "the wizard"
+	},
+	"to_create_server_record":
+	{
+		"message": "to add wickedsun server."
+	},
+	"torrent_clicks_capture":
+	{
+		"message": "Torrent clicks capture:"
+	},
+	"capture_left_mouse_clicks":
+	{
+		"message": "Capture left mouse clicks on torrent files"
+	},	
+	"context_menu_capture":
+	{
+		"message": "Context menu capture:"
+	},	
+	"switched_on_for_only":
+	{
+		"message": "Switched on for .torrent/magnet: files only"
+	},
+	"forced_for_all_links":
+	{
+		"message": "Forced for all links"
+	},
+	"disabled_for_all_links":
+	{
+		"message": "Disabled for all links"
+	},	
+	"progress_messages":
+	{
+		"message": "Progress messages:"
+	},	
+	"download_start":
+	{
+		"message": "Download start"
+	},	
+	"download_failure":
+	{
+		"message": "Download failure"
+	},	
+	"server_login_failure":
+	{
+		"message": "Server login failure"
+	},
+	"server_connection_timeout":
+	{
+		"message": "Server connection timeout"
+	},
+	"upload_start":
+	{
+		"message": "Upload started"
+	},
+	"upload_success":
+	{
+		"message": "Upload succeeded"
+	},	
+	"upload_failure":
+	{
+		"message": "Upload failed"
+	},	
+	"upload_options_rutorrent_only":
+	{
+		"message": "Upload options (rutorrent only):"
+	},		
+	"upload_without_starting":
+	{
+		"message": "Upload without starting the torrent"
+	},	
+	"edit_labels_before":
+	{
+		"message": "Edit labels before uploading"
+	},	
+	"edit_directories_before":
+	{
+		"message": "Select download directory before uploading the torrent"
+	},	
+	"other_options":
+	{
+		"message": "Other options:"
+	},	
+	"connection_timeout":
+	{
+		"message": "Connection timeout, in seconds:"
+	},	
+	"output_debug_messages":
+	{
+		"message": "Output debug messages to console"
+	},	
+	"keep_track_of_promo":
+	{
+		"message": "Notify me of new Wicked products"
+	},	
+	"save":
+	{
+		"message": "Save"
+	},
+	"seedbox_url":
+	{
+		"message": "Seedbox URL:"
+	},
+	"full_path_to_the_seedbox":
+	{
+		"message": "Full path to the seedbox, including protocol (http or https), server name, port number and the client path."
+	},
+	"user_name_registered":
+	{
+		"message": "User name registered on the server."
+	},
+	"password":
+	{
+		"message": "Password:"
+	},	
+	"password_for_the_above":
+	{
+		"message": "Password for the above user name."
+	},	
+	"description":
+	{
+		"message": "Description:"
+	},	
+	"your_description_for":
+	{
+		"message": "Description, comment..."
+	},	
+	"type_of_client":
+	{
+		"message": "Type of client this setting uses. Note: if should conform to seedbox URL."
+	},
+	"server_setup_wizard":
+	{
+		"message": "Server setup wizard"
+	},
+	"client_":
+	{
+		"message": "Client:"
+	},	
+	"username_":
+	{
+		"message": "Username:"
+	},
+	"subscription_type":
+	{
+		"message": "Subscription type:"
+	},
+	"shared":
+	{
+		"message": "Shared"
+	},	
+	"semidedicated":
+	{
+		"message": "Semidedicated"
+	},	
+	"dedicated":
+	{
+		"message": "Dedicated"
+	},
+	"next":
+	{
+		"message": "Next"
+	},	
+	"clients_to_be_available":
+	{
+		"message": "Available BitTorrent clients:"
+	},
+	"provide_your_login_details":
+	{
+		"message": "Please provide your login details:"
+	},
+	"seedbox_host_name":
+	{
+		"message": "Seedbox host name:"
+	},
+	"only_host_name":
+	{
+		"message": "Only host name of your seedbox. Without protocol, port number and the client path."
+	},	
+	"alternatively_you_can":
+	{
+		"message": "Alternatively, you can"
+	},	
+	"parse_your_welcome":
+	{
+		"message": "parse your welcome e-mail"
+	},	
+	"to_get_this_info":
+	{
+		"message": "to get this info."
+	},	
+	"done":
+	{
+		"message": "Done"
+	},	
+	"parse_welcome":
+	{
+		"message": "Parse welcome e-mail"
+	},	
+	"paste_your_wicked":
+	{
+		"message": "Please paste your Wicked welcome e-mail below"
+	},
+	"parse":
+	{
+		"message": "Parse"
+	},
+	"test_passed":
+	{
+		"message": "Test passed, configuration is correct."
+	},	
+	"test_failed":
+	{
+		"message": "Test failed. "
+	},
+	"request_failed":
+	{
+		"message": "Seedbox error. "
+	},		
+	"bad_credentials":
+	{
+		"message": "Server has rejected your credentials."
+	},
+	"server_unreacheable":
+	{
+		"message": "Server is unreachable."
+	},
+	"timeout_reached":
+	{
+		"message": "Timeout was reached."
+	},	
+	"servers_response":
+	{
+		"message": "Server's response was: "
+	},
+	"info":
+	{
+		"message": "Info"
+	},
+	"error":
+	{
+		"message": "Error"
+	},	
+	"torrent_uploaded":
+	{
+		"message": "Torrent has been uploaded successfully."
+	},
+	"torrent_upload_fail":
+	{
+		"message": "Upload failed."
+	},			
+	"tflux_not_support":
+	{
+		"message": "Torrentflux doesn't support magnet links."
+	},	
+	"upload_to":
+	{
+		"message": "Upload to "
+	},
+	"upload_to_seedbox":
+	{
+		"message": "Upload to Wicked seedbox"
+	},
+	"starting_torrent_download":
+	{
+		"message": "Starting torrent download."
+	},	
+	"starting_torrent_upload":
+	{
+		"message": "Starting torrent upload."
+	},
+	"seedbox_incorrect_path":
+	{
+		"message": "Seedbox doesn't seem to contain the correct path. Proceed anyway?"
+	},		
+	"seedbox_data_found":
+	{
+		"message": "Seedbox data  found in your Wicked preferences. Overwrite?"
+	},
+	"autoconfiguration_succeeded":
+	{
+		"message": "Autoconfiguration succeeded, number of clients were setup: "
+	},	
+	"autoconfiguration_failed":
+	{
+		"message": "Autoconfiguration failed - autoconf service not found."
+	},
+	"exporting_to_seedbox_title":
+	{
+		"message": "Exporting to seedbox"
+	},
+	"exporting_to_seedbox_desc":
+	{
+		"message": "You can export your login details from your browser to your seedbox's rutorrent so you don't have to type them manually. If you use this option, a list of supported sites for which you have a password stored in your browser will appear, and you will be able to select which one to export. No info will be sent until you explicitly approve it."
+	},	
+	"max_seedbox_reached":
+	{
+		"message": "You can have a maximum of 20 server records."
+	},	
+	"export_confirm":
+	{
+		"message": "This will access your logins/passwords for torrent sites stored in Firefox and will export them to the selected seedbox.\r\n\r\nProceed?"
+	},
+	"export_success":
+	{
+		"message": "Logins and passwords were successfully exported."
+	},
+	"remove_confirm":
+	{
+		"message": "Are you sure you want to remove this server?"
+	},
+	"download_error":
+	{
+		"message": "There was an error downloading the file."
+	},
+	"download_not_torrent":
+	{
+		"message": "Downloaded file is not a torrent."
+	},	
+	"mime_confirmation1":
+	{
+		"message": "Warning: Your Firefox is configured to silently save .torrent files to your hard drive. This means you will not be able to upload them to your seedbox.\r\n\r\nWould you like to change the setting so you are asked what you want to do with torrents files from now on?" 
+	},	
+	"mime_confirmation2":
+	{
+		"message": "Warning: Your Firefox is configured to pass .torrent files to the external application. This means you will not be able to upload them to your seedbox.\r\n\r\nWould you like to change the setting so you are asked what you want to do with torrents files from now on?" 
+	},
+	"seedbox_url_hint":
+	{
+		"message": "html:URL to access the bittorrent UI you want to upload to.<br/><br/>For example, if your server was <font color=blue>dedi010.wicked.com</font> and you wanted to upload via rutorrent then the URL would be <font color=blue>https://dedi010.wicked.com/rtorrent</font>.<br/><br/>Keep in mind that each provider may use naming schemes different to Wicked's. Please contact your provider if you have questions about configuring this extension for their service."
+	},
+	"do_you_want_autoconfigure":
+	{
+		"message": "Do you really want to autoconfigure Wicked seedbox uploader?"
+	}
+}

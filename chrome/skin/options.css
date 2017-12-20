@@ -1,0 +1,25 @@
+#wicked_banner
+{
+	background: url("chrome://wicked/skin/wicked.png") top center no-repeat;
+
+	width: 100%;
+	height: 43px;
+}
+
+#wicked_profiles
+{
+	height: 400px;
+	width: 535px;
+}
+
+#wicked_wizard
+{
+	margin-left: 150px;
+}
+
+#exportinfo
+{
+	color: #0094FF;
+	border-bottom: 1px dashed #0094FF;
+	cursor: pointer;
+}

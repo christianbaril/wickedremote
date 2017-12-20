@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Copyright (c) 2009-2012 wicked.com
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wicked/skin/wizard.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wicked/locale/wicked.dtd">
+
+<wizard id="wicked-server-wizard"
+		title="&wicked.wizard.title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		onload="net.wicked.seedbox.wizard.loadSetup();"
+		onwizardfinish="return net.wicked.seedbox.wizard.saveSetup();">
+
+	<script src="util.js" />
+	<script src="wizard.js" />
+
+	<wizardpage description="&wicked.wizard.subscription;">
+		<label value="&wicked.wizard.subscription_tip;" />
+		<menulist id="wicked_wizard_type" oncommand="net.wicked.seedbox.wizard.typeChanged(this);" disabled="true">
+			<menupopup>
+				<menuitem label="&wicked.wizard.shared;"  selected="true" />
+			</menupopup>
+		</menulist>
+
+		<spacer />
+
+		<label value="&wicked.wizard.clients;" />
+		<menulist id="wicked_wizard_client" disabled="true">
+			<menupopup>
+				<menuitem label="rutorrent 3.x" selected="true" />
+				<menuitem label="rutorrent 3.x" />
+				<menuitem label="rutorrent, utorrent, torrentflux-b4rt and deluge" />
+			</menupopup>
+		</menulist>
+	</wizardpage>
+
+	<wizardpage description="&wicked.wizard.login;">
+		<label value="&wicked.wizard.login_tip;" />
+
+		<spacer />
+
+		<label value="&wicked.options.user;:" control="wicked_entry_user" />
+		<textbox id="wicked_entry_user" />
+
+		<spacer />
+
+		<label value="&wicked.entry.pass;:" control="wicked_entry_pass" />
+		<textbox id="wicked_entry_pass" type="password" />
+
+		<spacer />
+
+		<label value="&wicked.options.host;:" control="wicked_entry_host" />
+		<textbox id="wicked_entry_host" value="rt-new.wickedsun.org" disabled="true" />
+
+		<spacer />
+
+		<hbox id="wicked_wizard_parse">&wicked.wizard.parser1; <label class="text-link" onclick="this.blur(); net.wicked.seedbox.wizard.parse(); return false;" value="&wicked.wizard.parser2;" /> &wicked.wizard.parser3;</hbox>
+
+	</wizardpage>
+
+</wizard>

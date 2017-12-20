@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Copyright (c) 2009-2012 wicked.com
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wicked/skin/entry.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wicked/locale/wicked.dtd">
+
+<dialog title="&wicked.entry.title;"
+		windowtype="global:wicked"
+		buttons="accept,cancel"
+		buttonlabelaccept="&wicked.options.ok;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		onload="net.wicked.seedbox.server.loadEntry()"
+		width="350px"
+		height="400px"
+		ondialogaccept="net.wicked.seedbox.server.saveEntry()">
+
+	<script src="util.js" />
+	<script src="entry.js" />
+
+	<vbox>
+		<tooltip id="urltip" orient="vertical" style="background-color: #33DD00;">
+			<label value="&wicked.entry.urltip1;"/>
+			<label value="&wicked.entry.urltip2;"/>
+		</tooltip>
+
+		<tooltip id="usertip" orient="vertical" style="background-color: #33DD00;">
+			<label value="&wicked.entry.usertip;"/>
+		</tooltip>
+
+		<tooltip id="passtip" orient="vertical" style="background-color: #33DD00;">
+			<label value="&wicked.entry.passtip;"/>
+		</tooltip>
+
+		<tooltip id="descrtip" orient="vertical" style="background-color: #33DD00;">
+			<label value="&wicked.entry.desctip;"/>
+		</tooltip>
+
+		<tooltip id="typetip" orient="vertical" style="background-color: #33DD00;">
+			<label value="&wicked.entry.typetip;"/>
+		</tooltip>
+
+		<hbox><label value="&wicked.options.server;:" control="wicked_entry_host"/><spacer /><button label="?" class="tooltip_button" oncommand='Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces["nsIPromptService"]).alert(null,"&wicked.options.server;","&wicked.host.hint;")'/></hbox>
+		<textbox id="wicked_entry_host" tooltip="urltip" onchange='net.wicked.seedbox.server.onHostChange();' disabled="true" />
+
+		<spacer />
+
+		<label value="&wicked.options.user;:" control="wicked_entry_user" />
+		<textbox id="wicked_entry_user" tooltip="usertip" />
+
+		<spacer />
+
+		<label value="&wicked.entry.pass;:" control="wicked_entry_pass" />
+		<textbox id="wicked_entry_pass" type="password" tooltip="passtip" />
+
+		<spacer />
+
+		<label value="&wicked.entry.description;:" control="wicked_entry_description" />
+		<textbox id="wicked_entry_description" tooltip="descrtip" />
+
+		<spacer />
+
+		<label value="&wicked.options.client;:" control="wicked_entry_client" />
+		<menulist id="wicked_entry_client" tooltip="typetip" oncommand='net.wicked.seedbox.server.onClientChange();' disabled="true" >
+			<menupopup>
+				<menuitem label="rutorrent 3.x" selected="true" />
+				<menuitem label="utorrent" />
+				<menuitem label="torrentflux-b4rt" />
+				<menuitem label="deluge" />
+			</menupopup>
+		</menulist>
+
+		<vbox id='rutorrent_options'>
+			<tooltip id="label_selection_title" orient="vertical" style="background-color: #33DD00;">
+				<label value="&wicked.entry.label_selection_title;"/>
+			</tooltip>
+			<tooltip id="permanent_label_title" orient="vertical" style="background-color: #33DD00;">
+				<label value="&wicked.entry.permanent_label_title;"/>
+			</tooltip>
+
+			<spacer />
+			<hbox><label value="&wicked.entry.label_selection;:" control="wicked_entry_label_selection" /><spacer /><button label="?" class="tooltip_button" oncommand='Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces["nsIPromptService"]).alert(null,"&wicked.entry.label_selection;","&wicked.entry.rutorrent_options_hint;")'/></hbox>
+			<menulist id="wicked_entry_label_selection" tooltip="label_selection_title" oncommand='net.wicked.seedbox.server.onLabelSelectionChange();' disabled="true" >
+				<menupopup>
+					<menuitem label="&wicked.entry.none;"  />
+					<menuitem label="&wicked.entry.at_runtime;" selected="true" />
+					<menuitem label="&wicked.entry.permanent;" />
+				</menupopup>
+			</menulist>
+			<spacer />
+			<textbox id="wicked_entry_permanent_label" tooltip="permanent_label_title" />
+
+			<tooltip id="directory_selection_title" orient="vertical" style="background-color: #33DD00;">
+				<label value="&wicked.entry.directory_selection_title;"/>
+			</tooltip>
+			<tooltip id="permanent_directory_title" orient="vertical" style="background-color: #33DD00;">
+				<label value="&wicked.entry.permanent_directory_title;"/>
+			</tooltip>
+
+			<spacer />
+			<hbox><label value="&wicked.entry.directory_selection;:" control="wicked_entry_directory_selection" /><spacer /><button label="?" class="tooltip_button" oncommand='Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces["nsIPromptService"]).alert(null,"&wicked.entry.directory_selection;","&wicked.entry.rutorrent_options_hint;")'/></hbox>
+			<menulist id="wicked_entry_directory_selection" tooltip="directory_selection_title" oncommand='net.wicked.seedbox.server.onDirectorySelectionChange();' disabled="true" >
+				<menupopup>
+					<menuitem label="&wicked.entry.none;" selected="true" />
+					<menuitem label="&wicked.entry.at_runtime;" />
+					<menuitem label="&wicked.entry.permanent;" />
+				</menupopup>
+			</menulist>
+			<spacer />
+			<textbox id="wicked_entry_permanent_directory" tooltip="permanent_directory_title" />
+
+		</vbox>
+
+	</vbox>
+</dialog>

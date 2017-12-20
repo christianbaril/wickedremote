@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Copyright (c) 2009-2012 wicked.com
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wicked/skin/options.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wicked/locale/wicked.dtd">
+
+<dialog title="&wicked.options.title;"
+		id="wicked_options"
+		windowtype="global:wicked"
+		persist=""
+		buttons="accept,cancel"
+		buttonlabelaccept="&wicked.options.save;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		onload="window.sizeToContent(); net.wicked.seedbox.options.loadData();"
+		ondialogaccept="net.wicked.seedbox.options.unloadData();">
+
+	<script src="config.js" />
+	<script src="util.js" />
+	<script src="options.js" />
+
+	<vbox>
+		<tabbox>
+			<tabs>
+				<tab label="Servers"/>
+				<tab label="Options"/>
+			</tabs>
+			<tabpanels>
+				<tabpanel id="serverstab">
+					<vbox>
+						<hbox>
+							<listbox id="wicked_profiles" flex="1" ondblclick="net.wicked.seedbox.options.editServer();" onselect="net.wicked.seedbox.options.checkSelection();">
+								<listhead>
+									<listheader label="&wicked.options.server;" />
+									<listheader label="&wicked.options.user;"   />
+									<listheader label="&wicked.options.client;" />
+								</listhead>
+								<listcols>
+									<listcol flex="3" />
+									<listcol flex="1" />
+									<listcol flex="1" />
+								</listcols>
+							</listbox>
+
+							<vbox>
+								<button label="&wicked.options.add;" oncommand="net.wicked.seedbox.options.addServer();"  id="wicked_add" />
+								<button label="&wicked.options.edit;" oncommand="net.wicked.seedbox.options.editServer();" id="wicked_edit" />
+								<button label="&wicked.options.test;" oncommand="net.wicked.seedbox.options.testServer();" id="wicked_test" />
+								<button label="&wicked.options.remove;" oncommand="net.wicked.seedbox.options.removeServer();" id="wicked_remove" />
+							</vbox>
+						</hbox>
+						<hbox id="wicked_wizard">&wicked.wizard.desc1; <label class="text-link" onclick="this.blur(); net.wicked.seedbox.options.wizard(); return false;" value="&wicked.wizard.desc2;" /> &wicked.wizard.desc3;</hbox>
+						<groupbox>
+							<caption label="&wicked.options.login;" />
+							<description style="max-width: 600px; text-align: center;">&wicked.export.desc1;<label id="exportinfo">&wicked.export.desc2;</label>. &wicked.export.desc3;</description>
+							<button disabled="true" label="&wicked.options.login;" oncommand="net.wicked.seedbox.options.loginServer();" id="wicked_sync" />
+						</groupbox>
+					</vbox>
+				</tabpanel>
+
+				<tabpanel id="optionstab">
+					<vbox>
+						<groupbox>
+							<caption label="&wicked.options.capture;" />
+							<radiogroup id="context-capture" align="left" orient="vertical">
+								<radio label="&wicked.options.capture0;" />
+								<radio label="&wicked.options.capture1;" />
+								<radio label="&wicked.options.capture2;" />
+							</radiogroup>
+						</groupbox>
+
+						<groupbox>
+							<caption label="&wicked.options.progress;" />
+							<vbox style="width: 100%">
+								<checkbox id="progress-messageds" label="&wicked.options.download_start;" checked="false" />
+								<checkbox id="progress-messagedf" label="&wicked.options.download_failure;" checked="false" />
+								<checkbox id="progress-messageus" label="&wicked.options.upload_start;" checked="false" />
+								<checkbox id="progress-messageuc" label="&wicked.options.upload_success;" checked="false" />
+								<checkbox id="progress-messageuf" label="&wicked.options.upload_failure;" checked="false" />
+							</vbox>
+							<spacer flex="1" />
+							<vbox>
+								<checkbox id="progress-messagesf" label="&wicked.options.server_login_failure;" checked="false" />
+								<checkbox id="progress-messagest" label="&wicked.options.server_connection_timeout;" checked="false" />
+							</vbox>
+						</groupbox>
+
+						<groupbox>
+							<caption label="&wicked.options.other_options;" />
+							<vbox>
+								<checkbox id="upload-nostart" label="&wicked.options.nostart;" checked="false" />
+							</vbox>
+						</groupbox>
+
+						<groupbox>
+							<caption label="&wicked.options.server_timeout;" />
+							<hbox style="width: 100%">
+								<spacer flex="1" />
+								<textbox id="upload-timeout" value="15" type="number" />
+								<spacer flex="1" />
+							</hbox>
+							<spacer flex="1" />
+							<checkbox id="promos" label="&wicked.options.promo;" checked="false" />
+						</groupbox>
+					</vbox>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</vbox>
+
+</dialog>

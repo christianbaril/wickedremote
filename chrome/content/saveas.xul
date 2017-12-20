@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  - Copyright (c) 2009-2010 wicked.com
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet type="text/css" href="chrome://dta/content/common/bindings.css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://wicked/locale/wicked.dtd">
+<overlay id="wickedSaveAs-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="util.js" />	
+	<script src="saveas.js" />
+	
+	<radiogroup id="mode">
+		<vbox insertbefore="save" id="wickedcontainer" flex="1">
+			<hbox id="wicked" flex="1" selected="true">
+				<radio id="wickedSave" label="&wicked.saveas.title;" disabled="true" selected="true" />
+				<spacer flex="1" />
+				<menulist id="wickedList">
+					<menupopup />
+				</menulist>
+			</hbox>
+		</vbox>
+	</radiogroup>
+</overlay>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Copyright (c) 2009-2010 wicked.com
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://wicked/skin/options.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wicked/locale/wicked.dtd">
+
+<dialog title="&wicked.seedboxes.title;"
+		id="wicked_seedboxes"
+		windowtype="global:wicked"
+		persist=""
+		buttons="accept,cancel"
+		buttonlabelaccept="&wicked.seedboxes.accept;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		onload="window.sizeToContent(); net.wicked.seedbox.seedboxes.loadData();"
+		ondialogaccept="return net.wicked.seedbox.seedboxes.unloadData();">
+
+	<script src="util.js" />		
+	<script src="seedboxes.js" />
+
+	<vbox>
+		<listbox id="wicked_profiles" flex="1" ondblclick="net.wicked.seedbox.seedboxes.acceptServer();" onselect="net.wicked.seedbox.seedboxes.checkSelection();">
+			<listhead>
+				<listheader label="&wicked.options.seedbox;" />
+				<listheader label="&wicked.options.user;"   />
+				<listheader label="&wicked.options.client;" />
+			</listhead>
+			<listcols>
+				<listcol flex="3" />
+				<listcol flex="1" />
+				<listcol flex="1" />
+			</listcols>
+		</listbox>
+	</vbox>
+
+</dialog>
